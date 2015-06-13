@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="9">
+	<Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a100tcsg324-1" LaunchPart="xc7a100tcsg324-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" State="current" Dir="$PRUNDIR/synth_1" LaunchTime="1420522800">
+		<File Type="RDS-UTIL" Name="minisys_utilization_synth.rpt"/>
+		<File Type="RUN-STRAT" Name="$PDATADIR/runs/synth_1/synth_1.psg"/>
+		<File Type="RDS-UTIL-PB" Name="minisys_utilization_synth.pb"/>
+		<File Type="RDS-DCP" Name="minisys.dcp"/>
+		<File Type="VDS-TIMINGSUMMARY" Name="minisys_timing_summary_synth.rpt"/>
+		<File Type="VDS-TIMING-PB" Name="minisys_timing_summary_synth.pb"/>
+		<File Type="PA-TCL" Name="minisys.tcl"/>
+		<File Type="RUN-SRCS" Name="$PDATADIR/runs/synth_1/sources.xml"/>
+		<File Type="RUN-CONSTRS" Name="$PDATADIR/runs/synth_1/constrs_in.xml"/>
+		<File Type="RDS-RDS" Name="minisys.rds"/>
+		<FileSet Type="BlockSrcs" Name="dist_mem_gen_0"/>
+		<FileSet Type="BlockSrcs" Name="dist_mem_gen_1"/>
+	</Run>
+	<Run Id="dist_mem_gen_0_synth_1" Type="Ft3:Synth" SrcSet="dist_mem_gen_0" Part="xc7a100tcsg324-1" LaunchPart="xc7a100tcsg324-1" ConstrsSet="dist_mem_gen_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/dist_mem_gen_0_synth_1" LaunchTime="1420468003">
+		<File Type="RDS-UTIL" Name="dist_mem_gen_0_utilization_synth.rpt"/>
+		<File Type="RUN-STRAT" Name="$PDATADIR/runs/dist_mem_gen_0_synth_1/dist_mem_gen_0_synth_1.psg"/>
+		<File Type="RDS-UTIL-PB" Name="dist_mem_gen_0_utilization_synth.pb"/>
+		<File Type="RDS-DCP" Name="dist_mem_gen_0.dcp"/>
+		<File Type="VDS-TIMINGSUMMARY" Name="dist_mem_gen_0_timing_summary_synth.rpt"/>
+		<File Type="VDS-TIMING-PB" Name="dist_mem_gen_0_timing_summary_synth.pb"/>
+		<File Type="PA-TCL" Name="dist_mem_gen_0.tcl"/>
+		<File Type="RUN-SRCS" Name="$PDATADIR/runs/dist_mem_gen_0_synth_1/sources.xml"/>
+		<File Type="RUN-CONSTRS" Name="$PDATADIR/runs/dist_mem_gen_0_synth_1/constrs_in.xml"/>
+		<File Type="RDS-RDS" Name="dist_mem_gen_0.rds"/>
+	</Run>
+	<Run Id="impl_1" Type="Ft2:EntireDesign" SynthRun="synth_1" Part="xc7a100tcsg324-1" ConstrsSet="constrs_1" Description="Vivado Implementation Defaults" State="current"/>
+	<Run Id="dist_mem_gen_0_impl_1" Type="Ft2:EntireDesign" SynthRun="dist_mem_gen_0_synth_1" Part="xc7a100tcsg324-1" ConstrsSet="dist_mem_gen_0" Description="Vivado Implementation Defaults"/>
+</Runs>
+

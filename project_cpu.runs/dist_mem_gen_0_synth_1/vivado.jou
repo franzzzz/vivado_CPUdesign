@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Vivado v2013.4 (64-bit)
+# SW Build 353583 on Mon Dec  9 17:49:19 MST 2013
+# IP Build 208076 on Mon Dec  2 12:38:17 MST 2013
+# Start of session at: Mon Jan 05 22:26:46 2015
+# Process ID: 8800
+# Log file: D:/Vivado/project_cpu/project_cpu.runs/dist_mem_gen_0_synth_1/dist_mem_gen_0.rds
+# Journal file: D:/Vivado/project_cpu/project_cpu.runs/dist_mem_gen_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source dist_mem_gen_0.tcl

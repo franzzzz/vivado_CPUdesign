@@ -1,0 +1,202 @@
+DEPTH = 1024;
+WIDTH = 32;
+
+ADDRESS_RADIX = HEX;
+DATA_RADIX = HEX;
+
+CONTENT
+BEGIN
+   0:	08000300; --	START:	J 	0C00H					;Ìø×ªµ½BIOSµÄÊ×µØÖ·
+   1:	20040000; --	ADDI	$A0, $ZERO, 0		;ÔÚ4Î»ÊýÂë¹ÜÖÐÏÔÊ¾1234
+   2:	20061234; --	ADDI	$A2, $ZERO, 1234H
+   3:	0C000322; --	JAL 	0C88H
+   4:	20040001; --	ADDI	$A0, $ZERO, 1
+   5:	20050000; --	ADDI	$A1, $ZERO, 0		;Õâ±ß¿ÉÒÔÉè¶¨Îª0£¬1£¬2£¬3£¬´Ó¶ø¿ÉÒÔ¿´µ½Ã¿¸öLEDµÄ±ä»¯Çé¿ö
+   6:	2006000A; --	ADDI	$A2, $ZERO, 0AH		;¸ü¸ÄµÚËÄ¸öÊýÂë¹ÜÎªA
+   7:	0C000322; --	JAL		0C88H
+   8:	20050001; --	ADDI	$A1, $ZERO, 1		;Õâ±ß¿ÉÒÔÉè¶¨Îª0£¬1£¬2£¬3£¬´Ó¶ø¿ÉÒÔ¿´µ½Ã¿¸öLEDµÄ±ä»¯Çé¿ö
+   9:	2006000B; --	ADDI	$A2, $ZERO, 0BH		;¸ü¸ÄµÚÈý¸öÊýÂë¹ÜÎªB
+   A:	0C000322; --	JAL		0C88H
+   B:	20050002; --	ADDI	$A1, $ZERO, 2		;Õâ±ß¿ÉÒÔÉè¶¨Îª0£¬1£¬2£¬3£¬´Ó¶ø¿ÉÒÔ¿´µ½Ã¿¸öLEDµÄ±ä»¯Çé¿ö
+   C:	2006000C; --	ADDI	$A2, $ZERO, 0CH		;¸ü¸ÄµÚ¶þ¸öÊýÂë¹ÜÎªC
+   D:	0C000322; --	JAL		0C88H
+   E:	20050003; --	ADDI	$A1, $ZERO, 3		;Õâ±ß¿ÉÒÔÉè¶¨Îª0£¬1£¬2£¬3£¬´Ó¶ø¿ÉÒÔ¿´µ½Ã¿¸öLEDµÄ±ä»¯Çé¿ö
+   F:	2006000D; --	ADDI	$A2, $ZERO, 0DH		;¸ü¸ÄµÚÒ»¸öÊýÂë¹ÜÎªD
+  10:	0C000322; --	JAL		0C88H
+  11:	20040000; --	ADDI	$A0, $ZERO, 0
+  12:	0C000358; --	JAL		0D60H
+  13:	20040001; --	ADDI	$A0, $ZERO, 1
+  14:	0C000358; --	JAL		0D60H
+ 300:	201D0FFF; --	ADDI 	$SP, $ZERO, 0FFFH	;³õÊ¼»¯$SP
+ 301:	20080000; --	ADDI 	$T0, $ZERO, 0
+ 302:	20090014; --	ADDI 	$T1, $ZERO, 0014H
+ 303:	3C0A55AA; --	LUI 	$T2, 55AAH
+ 304:	394A55AA; --	XORI	$T2, $T2, 55AAH
+ 305:	3C0BAA55; --	LUI		$T3, AA55H
+ 306:	396BAA55; --	XORI	$T3, $T3, AA55H
+ 307:	201000E1; --	ADDI	$S0, $ZERO, 0E1H		;RAM´íÎóÂë
+ 308:	8D180000; --	CHKRAM:	LW		$T8, 0($T0)
+ 309:	AD0A0000; --	SW		$T2, 0($T0)
+ 30A:	8D0C0000; --	LW		$T4, 0($T0)
+ 30B:	154C0013; --	BNE 	$T4, $T2, 004CH		;Ìøµ½ERROR±êÇ©
+ 30C:	AD0B0000; --	SW		$T3, 0($T0)
+ 30D:	8D0C0000; --	LW		$T4, 0($T0)
+ 30E:	156C0010; --	BNE 	$T4, $T3, 0040H		;Ìøµ½ERROR±êÇ©
+ 30F:	AD180000; --	SW		$T8, 0($T0)			;»Ö¸´Ô­À´µÄÖµ
+ 310:	11280002; --	BEQ		$T0, $T1, 0008H		;È«²¿¼ì²éÍê
+ 311:	21080004; --	ADDI	$T0, $T0, 4H		;µ½ÏÂÒ»¸öºº×Ö
+ 312:	08000308; --	J		CHKRAM
+ 313:	8C08FF12; --	CHKKREY:LW		$T0, FF12H($0)		;¶Á¼üÅÌ×´Ì¬
+ 314:	31080001; --	ANDI	$T0, $T0, 1H
+ 315:	14080009; --	BNE		$T0, $ZERO, 0024H	;Ã»°´¼üµÄÊ±ºòÓÐ°´¼üÐÅÏ¢£¬³ö´í
+ 316:	30080000; --	CHKLED:	ANDI	$T0, $ZERO, 0
+ 317:	3809AAAA; --	XORI	$T1, $ZERO, 0AAAAH
+ 318:	200A0002; --	DIPS:	ADDI	$T2, $ZERO, 0002H
+ 319:	AC08FF00; --	SW		$T0, FF00H($ZERO)
+ 31A:	214AFFFF; --	LOP:	ADDI	$T2, $T2, -1
+ 31B:	140AFFFE; --	BNE		$T2, $ZERO, -8
+ 31C:	21081111; --	ADDI 	$T0, $T0, 1111H
+ 31D:	1528FFFA; --	BNE		$T0, $T1, -24		;Ìøµ½DIPS±êÇ©
+ 31E:	08000001; --	J 0004H						;Æô¶¯ÓÃ»§³ÌÐò
+ 31F:	AC10FF00; --	ERROR:	SW		$S0, FF00H($ZERO)	;ÔÚÊýÂë¹ÜÉÏÊä³ö´íÎóÂë
+ 320:	AC19FF50; --	LP:		SW		$T9, FF50H($ZERO)	;¸´Î»¿´ÃÅ¹·
+ 321:	08000320; --	J 		LP
+ 322:	AFB00000; --	SW		$S0, 0($SP)			;½«$S0¼Ä´æÆ÷ÄÚÈÝÑ¹Õ»
+ 323:	23BDFFFC; --	ADDI	$SP, $SP, -4
+ 324:	AFB10000; --	SW 		$S1, 0($SP)			;½«$S1¼Ä´æÆ÷ÄÚÈÝÑ¹Õ»
+ 325:	23BDFFFC; --	ADDI	$SP, $SP, -4
+ 326:	20100001; --	ADDI	$S0, $ZERO, 1
+ 327:	12040003; --	BEQ		$A0, $S0, 0CH		;Ìøµ½FUN1±êÇ©
+ 328:	AC060DFC; --	SW		$A2, LEDDATA($ZERO)	;¹¦ÄÜ0£¬ÏÈ±£´æÐÂµÄµ±Ç°ÏÔÊ¾Öµ
+ 329:	AC06FF00; --	SW		$A2, FF00H($ZERO)	;Êä³öÊýÂë¹Ü
+ 32A:	0800034F; --	J 		LEDEXIT
+ 32B:	8C110DFC; --	FUN1:	LW		$S1, LEDDATA($ZERO)	;¶Á³öµ±Ç°ÏÔÊ¾Öµ
+ 32C:	10050007; --	BEQ		$A1, $ZERO, 1CH		;¸ù¾ÝÊä³öµÄÎ»ÊýÌø×ªµ½ÏàÓ¦µÄ´¦Àí³ÌÐò,ÕâÀïÌøµ½LOCA0
+ 32D:	20100001; --	ADDI 	$S0, $ZERO, 1
+ 32E:	1205000A; --	BEQ		$A1, $S0, 28H		;Ìøµ½LOCA1±êÇ©
+ 32F:	20100002; --	ADDI 	$S0, $ZERO, 2
+ 330:	1205000F; --	BEQ		$A1, $S0, 3CH		;Ìøµ½LOCA2±êÇ©
+ 331:	20100003; --	ADDI 	$S0, $ZERO, 3
+ 332:	12050014; --	BEQ		$A1, $S0, 50H		;Ìøµ½LOCA3±êÇ©
+ 333:	0800034F; --	J		LEDEXIT
+ 334:	3C08FFFF; --	LOCA0:	LUI		$T0, FFFFH
+ 335:	3908FFF0; --	XORI	$T0, $T0, FFF0H		;T0 = fffffff0H
+ 336:	02288824; --	AND		$S1, $S1, $T0		;Î»0Êä³ö
+ 337:	02268825; --	OR		$S1, $S1, $A2
+ 338:	0800034D; --	J		DISPL1
+ 339:	3C08FFFF; --	LOCA1:	LUI		$T0, FFFFH
+ 33A:	3908FF0F; --	XORI	$T0, $T0, FF0FH		;T0 = ffffff0fH
+ 33B:	02288824; --	AND		$S1, $S1, $T0		;Î»1Êä³ö
+ 33C:	00068100; --	SLL		$S0, $A2, 4			;Êä³öÊý¾Ý×óÒÆ¶þ½øÖÆ4Î»
+ 33D:	321000F0; --	ANDI	$S0, $S0, 00F0H
+ 33E:	02308825; --	OR		$S1, $S1, $S0
+ 33F:	0800034D; --	J 		DISPL1
+ 340:	3C08FFFF; --	LOCA2:	LUI		$T0, FFFFH
+ 341:	3908F0FF; --	XORI	$T0, $T0, F0FFH		;T0 = fffff0ffH
+ 342:	02288824; --	AND		$S1, $S1, $T0		;Î»2Êä³ö
+ 343:	00068200; --	SLL		$S0, $A2, 8			;Êä³öÊý¾Ý×óÒÆ¶þ½øÖÆ8Î»
+ 344:	32100F00; --	ANDI	$S0, $S0, 0F00H
+ 345:	02308825; --	OR		$S1, $S1, $S0
+ 346:	0800034D; --	J		DISPL1
+ 347:	3C08FFFF; --	LOCA3:	LUI		$T0, FFFFH
+ 348:	39080FFF; --	XORI	$T0, $T0, 0FFFH		;½$T0 = ffff0fffH
+ 349:	02288824; --	AND		$S1, $S1, $T0		;Î»3Êä³ö
+ 34A:	00068300; --	SLL		$S0, $A2, 000CH		;Êä³öÊý¾Ý×óÒÆ¶þ½øÖÆ12Î»
+ 34B:	3210F000; --	ANDI	$S0, $S0, F000H
+ 34C:	02308825; --	OR		$S1, $S1, $S0
+ 34D:	AC11FF00; --	DISPL1:	SW		$S1, 0FF00H($ZERO)	;Êä³öÊýÂë¹Ü
+ 34E:	AC110DFC; --	SW		$S1, LEDDATA($ZERO)	;±£´æÐÂµÄµ±Ç°ÏÔÊ¾Öµ
+ 34F:	23BD0004; --	LEDEXIT:ADDI	$SP, $SP, 4			;»Ø¸´$S1µÄÖµ
+ 350:	8FB10000; --	LW		$S1, 0($SP)
+ 351:	23BD0004; --	ADDI	$SP, $SP, 4			;»Ø¸´$S0µÄÖµ
+ 352:	8FB00000; --	LW		$S0, 0($SP)
+ 353:	03E00008; --	JR		$RA					;×Ó³ÌÐò·µ»Ø
+ 358:	AFB00000; --	SW		$S0, 0($SP)			;½«$S0¼Ä´æÆ÷ÄÚÈÝÑ¹Õ»
+ 359:	23BDFFFC; --	ADDI	$SP, $SP, -4
+ 35A:	AFB10000; --	SW 		$S1, 0($SP)			;½«$S1¼Ä´æÆ÷ÄÚÈÝÑ¹Õ»
+ 35B:	23BDFFFC; --	ADDI	$SP, $SP, -4
+ 35C:	20100001; --	ADDI	$S0, $ZERO, 1
+ 35D:	12040005; --	BEQ		$A0, $S0, 14H		;Ìøµ½KFUN1±êÇ©
+ 35E:	8C11FF12; --	KLOP:	LW		$S1, FF12H($ZERO)	;¶Á¼ü×´Ì¬
+ 35F:	32310001; --	ANDI	$S1, $S1, 1
+ 360:	1011FFFD; --	BEQ		$S1, $ZERO, 0FFF4H 	;µÈ´ý°´¼ü,Ìøµ½KLOP±êÇ©
+ 361:	8C11FF10; --	LW		$S1, FF10H($ZERO)	;¶Á¼üÖµ
+ 362:	0800036A; --	J	CODED					;È¥±àÂë
+ 363:	8C11FF12; --	KFUN1:	LW		$S1, FF12H($ZERO)	;¶Á¼ü×´Ì¬
+ 364:	32310001; --	ANDI	$S1, $S1, 1
+ 365:	10110001; --	BEQ		$S1, $ZERO, 4H		;ÎÞ¼ü£¬Ìøµ½NOKEY±êÇ©
+ 366:	08000369; --	J		READKEY				;Ìøµ½READKEY±êÇ©
+ 367:	200200FF; --	NOKEY:	ADDI	$V0, $ZERO, 0FFH
+ 368:	080003AB; --	J 		KEYEXIT
+ 369:	8C11FF10; --	READKEY:LW		$S1, FF10H($ZERO)	;¶Á¼üÖµ
+ 36A:	201000EE; --	CODED:	ADDI	$S0, $ZERO, 0EEH
+ 36B:	16110002; --	BNE		$S1, $S0, 8H		;Ìøµ½KEY1
+ 36C:	20020000; --	ADDI	$V0, $ZERO, 0
+ 36D:	080003AB; --	J		KEYEXIT
+ 36E:	201000ED; --	KEY1:	ADDI	$S0, $ZERO, 0EDH
+ 36F:	16110002; --	BNE		$S1, $S0, 8H		;Ìøµ½KEY2
+ 370:	20020001; --	ADDI 	$V0, $ZERO, 1
+ 371:	080003AB; --	J		KEYEXIT
+ 372:	201000EB; --	KEY2:	ADDI	$S0, $ZERO, 0EBH
+ 373:	16110002; --	BNE		$S1, $S0, 8H		;Ìøµ½KEY3
+ 374:	20020002; --	ADDI 	$V0, $ZERO, 2
+ 375:	080003AB; --	J		KEYEXIT
+ 376:	201000E7; --	KEY3:	ADDI	$S0, $ZERO, 0E7H
+ 377:	16110002; --	BNE		$S1, $S0, 8H		;Ìøµ½KEY4
+ 378:	20020003; --	ADDI 	$V0, $ZERO, 3
+ 379:	080003AB; --	J		KEYEXIT
+ 37A:	201000DE; --	KEY4:	ADDI	$S0, $ZERO, 0DEH
+ 37B:	16110002; --	BNE		$S1, $S0, 8H		;Ìøµ½KEY5
+ 37C:	20020004; --	ADDI 	$V0, $ZERO, 4
+ 37D:	080003AB; --	J		KEYEXIT
+ 37E:	201000DD; --	KEY5:	ADDI	$S0, $ZERO, 0DDH
+ 37F:	16110002; --	BNE		$S1, $S0, 8H		;Ìøµ½KEY6
+ 380:	20020005; --	ADDI 	$V0, $ZERO, 5
+ 381:	080003AB; --	J		KEYEXIT
+ 382:	201000DB; --	KEY6:	ADDI	$S0, $ZERO, 0DBH
+ 383:	16110002; --	BNE		$S1, $S0, 8H		;Ìøµ½KEY7
+ 384:	20020006; --	ADDI 	$V0, $ZERO, 6
+ 385:	080003AB; --	J		KEYEXIT
+ 386:	201000D7; --	KEY7:	ADDI	$S0, $ZERO, 0D7H
+ 387:	16110002; --	BNE		$S1, $S0, 8H		;Ìøµ½KEY8
+ 388:	20020007; --	ADDI 	$V0, $ZERO, 7
+ 389:	080003AB; --	J		KEYEXIT
+ 38A:	201000BE; --	KEY8:	ADDI	$S0, $ZERO, 0BEH
+ 38B:	16110002; --	BNE		$S1, $S0, 8H		;Ìøµ½KEY9
+ 38C:	20020008; --	ADDI 	$V0, $ZERO, 8
+ 38D:	080003AB; --	J		KEYEXIT
+ 38E:	201000BD; --	KEY9:	ADDI	$S0, $ZERO, 0BDH
+ 38F:	16110002; --	BNE		$S1, $S0, 8H		;Ìøµ½KEY10
+ 390:	20020009; --	ADDI 	$V0, $ZERO, 9
+ 391:	080003AB; --	J		KEYEXIT
+ 392:	201000BB; --	KEY10:	ADDI	$S0, $ZERO, 0BBH
+ 393:	16110002; --	BNE		$S1, $S0, 8H		;Ìøµ½KEY11
+ 394:	2002000A; --	ADDI 	$V0, $ZERO, 0AH
+ 395:	080003AB; --	J		KEYEXIT
+ 396:	201000B7; --	KEY11:	ADDI	$S0, $ZERO, 0B7H
+ 397:	16110002; --	BNE		$S1, $S0, 8H		;Ìøµ½KEY12
+ 398:	2002000B; --	ADDI 	$V0, $ZERO, 0BH
+ 399:	080003AB; --	J		KEYEXIT
+ 39A:	2010007E; --	KEY12:	ADDI	$S0, $ZERO, 07EH
+ 39B:	16110002; --	BNE		$S1, $S0, 8H		;Ìøµ½KEY13
+ 39C:	2002000C; --	ADDI 	$V0, $ZERO, 0CH
+ 39D:	080003AB; --	J		KEYEXIT
+ 39E:	2010007D; --	KEY13:	ADDI	$S0, $ZERO, 07DH
+ 39F:	16110002; --	BNE		$S1, $S0, 8H		;Ìøµ½KEY14
+ 3A0:	2002000D; --	ADDI 	$V0, $ZERO, 0DH
+ 3A1:	080003AB; --	J		KEYEXIT
+ 3A2:	2010007B; --	KEY14:	ADDI	$S0, $ZERO, 07BH
+ 3A3:	16110002; --	BNE		$S1, $S0, 8H		;Ìøµ½KEY15
+ 3A4:	2002000E; --	ADDI 	$V0, $ZERO, 0EH
+ 3A5:	080003AB; --	J		KEYEXIT
+ 3A6:	20100077; --	KEY15:	ADDI	$S0, $ZERO, 077H
+ 3A7:	16110002; --	BNE		$S1, $S0, 8H		;Ìøµ½KEY16
+ 3A8:	2002000F; --	ADDI 	$V0, $ZERO, 0FH
+ 3A9:	080003AB; --	J		KEYEXIT
+ 3AA:	200200FF; --	KEY16:	ADDI	$V0, $ZERO, 0FFH
+ 3AB:	23BD0004; --	KEYEXIT:ADDI	$SP, $SP, 4			;»Ö¸´$S1µÄÖµ
+ 3AC:	8FB10000; --	LW		$S1, 0($SP)
+ 3AD:	23BD0004; --	ADDI	$SP, $SP, 4			;»Ö¸´$S0µÄÖµ
+ 3AE:	8FB00000; --	LW		$S0, 0($SP)
+ 3AF:	03E00008; --	JR		$RA					;×Ó³ÌÐò·µ»Ø
+END;

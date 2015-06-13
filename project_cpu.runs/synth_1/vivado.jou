@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Vivado v2013.4 (64-bit)
+# SW Build 353583 on Mon Dec  9 17:49:19 MST 2013
+# IP Build 208076 on Mon Dec  2 12:38:17 MST 2013
+# Start of session at: Tue Jan 06 13:40:03 2015
+# Process ID: 6900
+# Log file: D:/Vivado/project_cpu/project_cpu.runs/synth_1/minisys.rds
+# Journal file: D:/Vivado/project_cpu/project_cpu.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source minisys.tcl

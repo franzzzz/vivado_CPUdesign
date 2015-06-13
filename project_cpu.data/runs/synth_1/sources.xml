@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DARoots Version="1" Minor="30">
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/MinySys-Int/wtd16.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../extra/2013/MinySys-Int/wtd16.v"/>
+        <Attr Name="ImportTime" Val="1355883002"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInImplementation" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MinySys-Int/uart16.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../extra/2013/MinySys-Int/uart16.v"/>
+        <Attr Name="ImportTime" Val="1355408924"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInImplementation" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MinySys-Int/pwm16.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../extra/2013/MinySys-Int/pwm16.v"/>
+        <Attr Name="ImportTime" Val="1355408312"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInImplementation" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MinySys-Int/memorio.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../extra/2013/MinySys-Int/memorio.v"/>
+        <Attr Name="ImportTime" Val="1355474838"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInImplementation" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MinySys-Int/led16.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../extra/2013/MinySys-Int/led16.v"/>
+        <Attr Name="ImportTime" Val="1355400138"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInImplementation" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MinySys-Int/key16.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../extra/2013/MinySys-Int/key16.v"/>
+        <Attr Name="ImportTime" Val="1355402660"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInImplementation" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MinySys-Int/ioread.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../extra/2013/MinySys-Int/ioread.v"/>
+        <Attr Name="ImportTime" Val="1355475184"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInImplementation" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MinySys-Int/init32.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../extra/2013/MinySys-Int/init32.v"/>
+        <Attr Name="ImportTime" Val="1355477192"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInImplementation" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MinySys-Int/Ifetc32.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../extra/2013/MinySys-Int/Ifetc32.v"/>
+        <Attr Name="ImportTime" Val="1355507952"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInImplementation" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MinySys-Int/Idecode32.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../extra/2013/MinySys-Int/Idecode32.v"/>
+        <Attr Name="ImportTime" Val="1355470944"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInImplementation" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MinySys-Int/Executs32.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../extra/2013/MinySys-Int/Executs32.v"/>
+        <Attr Name="ImportTime" Val="1355473148"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInImplementation" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MinySys-Int/dmemory32.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../extra/2013/MinySys-Int/dmemory32.v"/>
+        <Attr Name="ImportTime" Val="1355473362"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInImplementation" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MinySys-Int/ctc16.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../extra/2013/MinySys-Int/ctc16.v"/>
+        <Attr Name="ImportTime" Val="1355453826"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInImplementation" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MinySys-Int/control32.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../extra/2013/MinySys-Int/control32.v"/>
+        <Attr Name="ImportTime" Val="1355473986"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInImplementation" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MinySys-Int/minisys.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../extra/2013/MinySys-Int/minisys.v"/>
+        <Attr Name="ImportTime" Val="1355503238"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInImplementation" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MinySys-Int/prgmip32cpu.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../extra/2013/MinySys-Int/prgmip32cpu.mif"/>
+        <Attr Name="ImportTime" Val="1355900020"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MinySys-Int/prgmip32.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../extra/2013/MinySys-Int/prgmip32.mif"/>
+        <Attr Name="ImportTime" Val="1355499278"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MinySys-Int/prgmip32 - test4.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../extra/2013/MinySys-Int/prgmip32 - test4.mif"/>
+        <Attr Name="ImportTime" Val="1292684638"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MinySys-Int/prgmip32 - reset.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../extra/2013/MinySys-Int/prgmip32 - reset.mif"/>
+        <Attr Name="ImportTime" Val="1355728284"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MinySys-Int/prgmip32 - CPU &amp; INT.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../extra/2013/MinySys-Int/prgmip32 - CPU &amp; INT.mif"/>
+        <Attr Name="ImportTime" Val="1355499278"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MinySys-Int/prgmip32 - BIOS(CHKRAM 5).mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../extra/2013/MinySys-Int/prgmip32 - BIOS(CHKRAM 5).mif"/>
+        <Attr Name="ImportTime" Val="1355900020"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MinySys-Int/prgmip32 - BIOS(CHKRAM 1024).mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../extra/2013/MinySys-Int/prgmip32 - BIOS(CHKRAM 1024).mif"/>
+        <Attr Name="ImportTime" Val="1355884538"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MinySys-Int/dmem32.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../extra/2013/MinySys-Int/dmem32.mif"/>
+        <Attr Name="ImportTime" Val="1355900016"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MinySys-Int/dmem32-CPU &amp; INT.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../extra/2013/MinySys-Int/dmem32-CPU &amp; INT.mif"/>
+        <Attr Name="ImportTime" Val="1355722962"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MinySys-Int/dmem32 - test4.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../extra/2013/MinySys-Int/dmem32 - test4.mif"/>
+        <Attr Name="ImportTime" Val="1292684638"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MinySys-Int/dmem32 - BIOS(CHKRAM 5).mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../extra/2013/MinySys-Int/dmem32 - BIOS(CHKRAM 5).mif"/>
+        <Attr Name="ImportTime" Val="1355882618"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MinySys-Int/dmem32 - BIOS(CHKRAM 1024).mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../extra/2013/MinySys-Int/dmem32 - BIOS(CHKRAM 1024).mif"/>
+        <Attr Name="ImportTime" Val="1355843468"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="c:/Users/Fran/Desktop/test_31.coe">
+      <FileInfo>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="c:/Users/Fran/Desktop/prg_blank.coe">
+      <FileInfo>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="c:/Users/Fran/Desktop/dmem32.coe">
+      <FileInfo>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="minisys"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+</DARoots>
